@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Future-Chat | Setup Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#e1e0ff",
+              "error-container": "#ffdad6",
+              "tertiary": "#6b00b7",
+              "on-secondary-fixed-variant": "#2f2ebe",
+              "tertiary-container": "#862dd4",
+              "inverse-on-surface": "#eef0ff",
+              "primary-container": "#4f46e4",
+              "background": "#faf8ff",
+              "on-secondary": "#ffffff",
+              "secondary": "#4648d4",
+              "primary-fixed": "#e2dfff",
+              "inverse-surface": "#283044",
+              "on-secondary-fixed": "#07006c",
+              "on-secondary-container": "#fffbff",
+              "on-surface": "#131b2e",
+              "error": "#ba1a1a",
+              "on-error": "#ffffff",
+              "surface-variant": "#dae2fd",
+              "secondary-fixed-dim": "#c0c1ff",
+              "on-tertiary-fixed-variant": "#6900b3",
+              "surface-container-high": "#e2e7ff",
+              "on-primary": "#ffffff",
+              "on-primary-container": "#dad7ff",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#6063ee",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#c3c0ff",
+              "surface-tint": "#4e44e2",
+              "surface": "#faf8ff",
+              "tertiary-fixed-dim": "#ddb7ff",
+              "surface-container": "#eaedff",
+              "on-tertiary-container": "#ebd2ff",
+              "primary-fixed-dim": "#c3c0ff",
+              "surface-container-low": "#f2f3ff",
+              "surface-container-highest": "#dae2fd",
+              "on-background": "#131b2e",
+              "surface-dim": "#d2d9f4",
+              "outline": "#777587",
+              "on-primary-fixed": "#0f0069",
+              "primary": "#3626cc",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#464555",
+              "tertiary-fixed": "#f0dbff",
+              "outline-variant": "#c7c4d8",
+              "surface-bright": "#faf8ff",
+              "on-tertiary-fixed": "#2c0051",
+              "on-primary-fixed-variant": "#3424ca"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#faf8ff] dark:bg-slate-950 docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-[#131b2e] dark:text-slate-100 tracking-tighter">
+                Future-Chat
+            </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-[#131b2e]/60 dark:text-slate-400 font-medium hover:text-[#4f46e4] transition-colors duration-200" href="#">Start</a>
+<a class="text-[#131b2e]/60 dark:text-slate-400 font-medium hover:text-[#4f46e4] transition-colors duration-200" href="#">Demo</a>
+<a class="text-[#131b2e]/60 dark:text-slate-400 font-medium hover:text-[#4f46e4] transition-colors duration-200" href="#">Try</a>
+<!-- Active Navigation: Setup -->
+<a class="text-[#4f46e4] dark:text-[#818cf8] font-bold border-b-2 border-[#4f46e4] pb-1 hover:text-[#4f46e4] transition-colors duration-200" href="#">Setup</a>
+<a class="text-[#131b2e]/60 dark:text-slate-400 font-medium hover:text-[#4f46e4] transition-colors duration-200" href="#">Finish</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#131b2e]/60 dark:text-slate-400 hover:text-[#4f46e4] transition-colors">help</button>
+</div>
+</div>
+<div class="bg-[#f2f3ff] dark:bg-slate-900 h-px w-full"></div>
+</header>
+<!-- Main Content Stage -->
+<main class="flex-grow flex flex-col items-center justify-center px-6 py-12 md:py-24 max-w-5xl mx-auto w-full">
+<!-- Header Section -->
+<div class="w-full mb-12 text-left">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-xs font-bold tracking-widest uppercase">
+                Step 1 of 2
+            </span>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface mb-4 leading-tight">
+                Set Up in Minutes
+            </h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-xl font-medium">
+                Connect your Shopify store and let our AI architect learn your product catalog instantly.
+            </p>
+</div>
+<!-- Onboarding Canvas (Bento/Card Style) -->
+<div class="w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Video & Action Card -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-lg p-2 shadow-[0_24px_48px_rgba(19,27,46,0.06)] overflow-hidden">
+<div class="relative group bg-surface-container-low rounded-[1.5rem] overflow-hidden aspect-video">
+<!-- Video Placeholder Decoration -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-20 h-20 rounded-full bg-primary/90 text-white flex items-center justify-center shadow-2xl scale-100 group-hover:scale-105 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<img class="w-full h-full object-cover opacity-60 mix-blend-multiply" data-alt="Modern clean workspace with a laptop showing a Shopify dashboard interface in soft daylight lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBymwJDc3lRuEOK5qWRhKv7VIuLgVyT9QeZCU65fSHMdAJC3UIz3TXk7lM-1hov0SwTaRjPPK2x2tCCLyiiUWBIObb7-paUmOFI4gx_HBdMzHZmSpzp4SNXc6WLzXHTDXdDQSjT610f4F2XYy7rHQ4vugYvNIyJrFQrLlLV5Rs9V5kCZq3qPCOmLSWiZlJlvYTDRQRsVCbPuL-xt0SiiGx5o4rITLy5YnlMpC7HK72h7nsPlmBf9qDkQ-ikx42F6WyX4NlMIJnSa67L"/>
+<!-- Overlay Label -->
+<div class="absolute bottom-6 left-6 flex items-center gap-3 bg-white/70 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+<span class="material-symbols-outlined text-primary text-sm">auto_videocam</span>
+<span class="text-xs font-bold text-on-surface tracking-wide uppercase">Watch Guide: Shopify Install</span>
+</div>
+</div>
+</div>
+<!-- Instruction Sidebar -->
+<div class="md:col-span-4 space-y-6">
+<div class="bg-surface-container-low rounded-lg p-8">
+<h3 class="text-xl font-bold mb-4">Installation Steps</h3>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">1</div>
+<div>
+<p class="font-bold text-on-surface">Click "Install App"</p>
+<p class="text-sm text-on-surface-variant">Grant permissions in your Shopify admin panel.</p>
+</div>
+</li>
+<li class="flex gap-4 opacity-50">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-outline-variant text-on-surface flex items-center justify-center font-bold text-sm">2</div>
+<div>
+<p class="font-bold text-on-surface">Sync Catalog</p>
+<p class="text-sm text-on-surface-variant">We'll automatically fetch your products and variants.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="p-6 rounded-lg bg-surface-container-high flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+<p class="text-sm font-medium text-on-surface">
+<strong>Security First:</strong> Your store data is encrypted and never shared.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Visual Anchor: Ambient Layering -->
+<div class="w-full h-32 mt-12 bg-gradient-to-t from-transparent to-surface-container-low/30 rounded-t-full blur-3xl"></div>
+</main>
+<!-- BottomNavBar (Transactional/Action Shell) -->
+<footer class="fixed bottom-0 left-0 w-full flex justify-between items-center px-10 py-6 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl z-50 border-t border-[#c7c4d8]/15 shadow-[0_-24px_48px_rgba(19,27,46,0.06)]">
+<!-- Progress Indicators -->
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<div class="h-1.5 w-12 rounded-full bg-primary"></div>
+<div class="h-1.5 w-12 rounded-full bg-surface-container-highest"></div>
+</div>
+<div class="hidden sm:block">
+<p class="text-[10px] font-bold text-on-surface-variant tracking-widest uppercase">Next up</p>
+<p class="text-sm font-bold text-on-surface">Customize Experience</p>
+</div>
+</div>
+<!-- Primary Actions -->
+<div class="flex items-center gap-6">
+<button class="text-[#131b2e] dark:text-slate-300 font-medium hover:underline active:scale-95 transform transition-all duration-300 font-['Inter'] text-sm tracking-wide uppercase">
+                Back
+            </button>
+<button class="bg-gradient-to-br from-[#3626cc] to-[#4f46e4] rounded-full px-8 py-3 text-white shadow-lg active:scale-95 transform transition-all duration-300 font-['Inter'] font-semibold text-sm tracking-wide uppercase">
+                Next: Customize
+            </button>
+</div>
+</footer>
+<!-- Accessibility & Decorations -->
+<div class="fixed top-1/4 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="fixed bottom-1/4 -left-24 w-96 h-96 bg-secondary/5 rounded-full blur-[120px] pointer-events-none"></div>
+</body></html>

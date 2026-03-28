@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Future-Chat | AI Personal Shopping Assistant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#e1e0ff",
+              "error-container": "#ffdad6",
+              "tertiary": "#6b00b7",
+              "on-secondary-fixed-variant": "#2f2ebe",
+              "tertiary-container": "#862dd4",
+              "inverse-on-surface": "#eef0ff",
+              "primary-container": "#4f46e4",
+              "background": "#faf8ff",
+              "on-secondary": "#ffffff",
+              "secondary": "#4648d4",
+              "primary-fixed": "#e2dfff",
+              "inverse-surface": "#283044",
+              "on-secondary-fixed": "#07006c",
+              "on-secondary-container": "#fffbff",
+              "on-surface": "#131b2e",
+              "error": "#ba1a1a",
+              "on-error": "#ffffff",
+              "surface-variant": "#dae2fd",
+              "secondary-fixed-dim": "#c0c1ff",
+              "on-tertiary-fixed-variant": "#6900b3",
+              "surface-container-high": "#e2e7ff",
+              "on-primary": "#ffffff",
+              "on-primary-container": "#dad7ff",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#6063ee",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#c3c0ff",
+              "surface-tint": "#4e44e2",
+              "surface": "#faf8ff",
+              "tertiary-fixed-dim": "#ddb7ff",
+              "surface-container": "#eaedff",
+              "on-tertiary-container": "#ebd2ff",
+              "primary-fixed-dim": "#c3c0ff",
+              "surface-container-low": "#f2f3ff",
+              "surface-container-highest": "#dae2fd",
+              "on-background": "#131b2e",
+              "surface-dim": "#d2d9f4",
+              "outline": "#777587",
+              "on-primary-fixed": "#0f0069",
+              "primary": "#3626cc",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#464555",
+              "tertiary-fixed": "#f0dbff",
+              "outline-variant": "#c7c4d8",
+              "surface-bright": "#faf8ff",
+              "on-tertiary-fixed": "#2c0051",
+              "on-primary-fixed-variant": "#3424ca"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-[#faf8ff] dark:bg-slate-950 fixed top-0 w-full z-50">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-[#131b2e] dark:text-slate-100 tracking-tighter">
+                Future-Chat
+            </div>
+<nav class="hidden md:flex items-center gap-8">
+<!-- Navigation mapping: "Start" is active -->
+<a class="text-[#4f46e4] dark:text-[#818cf8] font-bold border-b-2 border-[#4f46e4] pb-1 transition-colors duration-200" href="#">Start</a>
+<a class="text-[#131b2e]/60 dark:text-slate-400 font-medium hover:text-[#4f46e4] transition-colors duration-200" href="#">Demo</a>
+<a class="text-[#131b2e]/60 dark:text-slate-400 font-medium hover:text-[#4f46e4] transition-colors duration-200" href="#">Try</a>
+<a class="text-[#131b2e]/60 dark:text-slate-400 font-medium hover:text-[#4f46e4] transition-colors duration-200" href="#">Setup</a>
+<a class="text-[#131b2e]/60 dark:text-slate-400 font-medium hover:text-[#4f46e4] transition-colors duration-200" href="#">Finish</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="help">help</button>
+</div>
+</div>
+<div class="bg-[#f2f3ff] dark:bg-slate-900 h-px w-full"></div>
+</header>
+<main class="relative min-h-screen pt-24 lg:pt-32 px-6 lg:px-12">
+<!-- Background Atmospheric Element -->
+<div class="absolute top-0 right-0 -z-10 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 left-0 -z-10 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[100px] -translate-x-1/4 translate-y-1/4"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Hero Text Content -->
+<div class="lg:col-span-7 z-10">
+<div class="inline-flex items-center px-4 py-2 bg-surface-container-high rounded-full mb-8">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse mr-2"></span>
+<span class="text-xs font-bold text-primary tracking-widest uppercase font-label">Next-Gen AI Shopping</span>
+</div>
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-black font-headline tracking-tighter text-on-surface leading-[0.9] mb-8">
+                    Turn your store into a <span class="text-primary">personal</span> shopping experience
+                </h1>
+<p class="text-xl md:text-2xl text-on-surface-variant/80 font-medium max-w-xl mb-12">
+                    See it live in 60 seconds
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-10 py-5 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-sm tracking-wide uppercase shadow-xl hover:scale-105 transition-all duration-300 active:scale-95">
+                        Start Demo
+                    </button>
+<button class="px-10 py-5 bg-surface-container-lowest text-on-surface font-semibold rounded-full text-sm tracking-wide uppercase border border-outline-variant/15 hover:bg-surface-container-low transition-all duration-300 shadow-sm">
+                        View Pricing
+                    </button>
+</div>
+<!-- Trusted By / Stats Section -->
+<div class="mt-16 flex flex-col gap-4">
+<p class="text-sm font-bold text-on-surface/40 uppercase tracking-widest font-label">Trusted by high-growth brands</p>
+<div class="flex gap-8 items-center opacity-40 grayscale hover:grayscale-0 transition-all">
+<span class="font-black text-xl tracking-tighter">LUMIÈRE</span>
+<span class="font-black text-xl tracking-tighter">VELOCE</span>
+<span class="font-black text-xl tracking-tighter">MODERNIST</span>
+</div>
+</div>
+</div>
+<!-- Hero Visual Stage -->
+<div class="lg:col-span-5 relative">
+<!-- Main Glass Card -->
+<div class="relative bg-surface-container-lowest/70 backdrop-blur-2xl rounded-lg p-6 shadow-[0_24px_48px_rgba(19,27,46,0.06)] border border-outline-variant/15 transform lg:rotate-2 hover:rotate-0 transition-transform duration-700">
+<!-- Chat UI Preview -->
+<div class="space-y-4 mb-8">
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="bg-surface-container-highest rounded-md rounded-tl-none p-4 max-w-[80%] text-sm font-medium">
+                                Hi! I'm looking for a sustainable winter coat that works for both hiking and city life.
+                            </div>
+</div>
+<div class="flex gap-3 flex-row-reverse">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-sm">person</span>
+</div>
+<div class="bg-primary text-on-primary rounded-md rounded-tr-none p-4 max-w-[80%] text-sm font-medium">
+                                Based on your style, I recommend the "Nordic Apex" parka. It uses recycled down and has a sleek silhouette for the city.
+                            </div>
+</div>
+</div>
+<!-- Product Card Inset -->
+<div class="bg-surface-container-low rounded-lg p-4 flex gap-4 items-center">
+<div class="w-20 h-20 rounded-md bg-white overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Premium minimalist winter parka in charcoal grey displayed against a soft studio background with clean lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5z0Fvo0E9EHVOJXnAFEfX_spufqg5PuBkSo7azfl18JmiGCL7ljABD2Q0alhXX-8Z76MVQsVWCuqEu2d14Y4-0sjeB9qrs5BG4387HiIzZQTtqQGK7k3wCQ5fxmHg1upqt2yXXf2PvlHob2QP5Img-o8xzzXMJJ6h4Fd8Bpn567qdmGeQVJQwEXDLiO8WGCJMujaCvy5tlOMPOISXF-D9drsEEqRRFiFELdw3_WtGGg--q8LekDCSPWeDqakGppT144e6HkcVW-NC"/>
+</div>
+<div class="flex-grow">
+<h4 class="font-bold text-on-surface text-sm">Nordic Apex Parka</h4>
+<p class="text-xs text-on-surface-variant">$249.00 • Eco-Tech Fabric</p>
+<div class="mt-2 flex gap-1">
+<span class="w-3 h-3 rounded-full bg-on-surface"></span>
+<span class="w-3 h-3 rounded-full bg-slate-400"></span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary">arrow_forward_ios</span>
+</div>
+</div>
+<!-- Floating Abstract Orb Decor -->
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-pulse"></div>
+<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-tertiary-container rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+<!-- Floating Card Detail -->
+<div class="absolute top-1/4 -right-10 bg-white p-3 rounded-md shadow-lg border border-outline-variant/10 hidden xl:block">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-green-500"></div>
+<span class="text-[10px] font-bold tracking-widest uppercase">Live Conversion +24%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bento Grid Section (Value Props) -->
+<section class="max-w-7xl mx-auto mt-32 lg:mt-48 mb-40">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Large Feature Card -->
+<div class="md:col-span-2 bg-surface-container-low rounded-lg p-10 flex flex-col justify-between min-h-[400px]">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">psychology</span>
+<h3 class="text-3xl font-black font-headline tracking-tighter mb-4">Deep Semantic Understanding</h3>
+<p class="text-on-surface-variant leading-relaxed max-w-md">
+                            Our AI doesn't just search keywords. It understands context, intent, and subtle preferences to guide users to exactly what they need.
+                        </p>
+</div>
+<div class="mt-8 flex items-center gap-4">
+<div class="h-1 flex-grow bg-on-surface/5 rounded-full overflow-hidden">
+<div class="w-3/4 h-full bg-primary"></div>
+</div>
+<span class="font-bold text-xs font-label">98% ACCURACY</span>
+</div>
+</div>
+<!-- Secondary Card -->
+<div class="bg-surface-container-highest rounded-lg p-10 flex flex-col items-center text-center justify-center">
+<div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<h3 class="text-2xl font-black font-headline tracking-tighter mb-2">Instant Setup</h3>
+<p class="text-on-surface-variant text-sm">Connect your Shopify or WooCommerce in 3 clicks. No coding required.</p>
+</div>
+<!-- Bottom Row Bento Items -->
+<div class="bg-surface-container-lowest border border-outline-variant/15 rounded-lg p-10 flex flex-col">
+<span class="material-symbols-outlined text-secondary text-3xl mb-6">monitoring</span>
+<h3 class="text-xl font-black font-headline tracking-tighter mb-2">Analytics Dashboard</h3>
+<p class="text-on-surface-variant text-sm">Real-time insights into what your customers are asking for.</p>
+</div>
+<div class="md:col-span-2 bg-[#131b2e] text-white rounded-lg p-10 flex items-center justify-between overflow-hidden relative">
+<div class="relative z-10 max-w-sm">
+<h3 class="text-3xl font-black font-headline tracking-tighter mb-4">Ready to double your conversion?</h3>
+<p class="text-white/60 mb-8">Join over 500+ stores using Future-Chat to scale their customer service.</p>
+<button class="px-8 py-3 bg-white text-[#131b2e] rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white/90 transition-all">Start Your Free Trial</button>
+</div>
+<!-- Decorative Background for this dark card -->
+<div class="absolute right-0 top-0 h-full w-1/3 bg-primary/20 blur-3xl rounded-full"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<footer class="fixed bottom-0 left-0 w-full flex justify-between items-center px-10 py-6 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl shadow-[0_-24px_48px_rgba(19,27,46,0.06)] border-t border-[#c7c4d8]/15 z-50">
+<div class="flex gap-8 items-center">
+<button class="text-[#131b2e] dark:text-slate-300 font-medium hover:underline transition-all duration-300 active:scale-95 transform">Back</button>
+</div>
+<div class="hidden md:flex gap-10">
+<!-- Central Navigation items would go here if defined in JSON, but using the specific JSON actions below -->
+</div>
+<div class="flex gap-4 items-center">
+<button class="bg-gradient-to-br from-[#3626cc] to-[#4f46e4] rounded-full px-8 py-3 text-white shadow-lg font-['Inter'] font-semibold text-sm tracking-wide uppercase hover:opacity-90 transition-all duration-300 active:scale-95 transform">
+                Continue
+            </button>
+</div>
+</footer>
+</body></html>
